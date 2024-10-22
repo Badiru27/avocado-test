@@ -16,7 +16,11 @@ export function createWallets() {
   for (let i = 0; i < 5; i++) {
     const wallet = ethers.Wallet.createRandom();
     wallet.push(wallet);
-    console.log(`Wallet ${i + 1}:`, wallet.address);
+    console.log(
+      `Wallet ${i + 1}:`,
+      wallet.address,
+      `private key: ${wallet.privateKey}`
+    );
   }
   return wallet;
 }
