@@ -7,10 +7,11 @@ import {
 
 env.config();
 
-async function runMain() {
+const wallets = createWallets();
+
+async function mintAndTransfer() {
   const recipientAddress = "0x31bDA42da2d578b801a996db5Fc71f23B48ccA13";
   try {
-    const wallets = createWallets();
 
     await mintTokens(wallets);
 
@@ -20,4 +21,6 @@ async function runMain() {
   }
 }
 
-runMain();
+
+/// Call mint and transfer once wallets are funded with gas fees
+//mintAndTransfer()
