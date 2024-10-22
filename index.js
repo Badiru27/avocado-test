@@ -7,7 +7,7 @@ import {
 
 env.config();
 
-async function main() {
+async function runMain() {
   const recipientAddress = "0x31bDA42da2d578b801a996db5Fc71f23B48ccA13";
   try {
     const wallets = createWallets();
@@ -19,3 +19,5 @@ async function main() {
     console.log(`error occurred ${error}`);
   }
 }
+
+runMain();
